@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .my-container {
+      padding-left: 16px;
+      padding-right: 16px;
+      /* add rounding if you want containers rounded too: */
+      border-radius: 20px;
+      /* optional: if container has background and you want text white */
+      color: white;
+      overflow: hidden; /* helps if there are inner elements, to respect rounded corners */
+    }
+
+    .my-panel {
+      padding: 16px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      color: white; 
+      border-radius: 20px;
+      border-width: 5px;
+      border-style: solid;
+    }
+    .hidden {
+        display:none;
+    }
+
+    .bg-red {
+      background-color: red; 
+    }
+    .bg-green {
+      background-color: green; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="my-container">
+    <h2>Displaying Panels</h2>
+    <p>Panels are the same as containers except for an added top and bottom margin.</p>
+
+    <div class="my-panel bg-green">
+      <p>I am a panel</p>
+    </div>
+
+    <div class="my-panel bg-red">
+      <p>I am a panel</p>
+    </div>
+
+    <div class="my-container bg-green">
+      <p>I am a container</p>
+    </div>
+
+    <div class="my-container bg-red">
+      <p>I am a container</p>
+    </div>
+  </div>
+
+</body>
+</html>
