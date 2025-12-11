@@ -15,6 +15,7 @@
     /* Descendant combinator: style all descendants */
     .grandparent * {
       font-family: Verdana, sans-serif;
+
     }
 
     /* Child combinator: style only direct .parent children of .grandparent */
@@ -26,8 +27,8 @@
     }
 
     /* Descendant combinator: style .child anywhere under .grandparent */
-    .grandparent .child {
-      color: darkgreen;
+    .grandparent .child:nth-child(1){
+      color: red;
       font-size: 20px;
     }
 
