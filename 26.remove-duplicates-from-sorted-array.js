@@ -9,16 +9,18 @@
  * @param {number[]} nums
  * @return {number}
  */
-function removeDuplicates(nums) {
-  if (nums.length === 0) return 0;
+var deleteDuplicates = function(head) {
+    let current = head;
 
-  let i = 0;
-  for (let j = 1; j < nums.length; j++) {
-    if (nums[j] !== nums[i]) {
-      i++;
-      nums[i] = nums[j];
+    while (current !== null && current.next !== null) {
+        if (current.val === current.next.val) {
+            current.next = current.next.next;  
+        } else {
+            current = current.next;          
+        }
     }
-  }
-  return i + 1;
-}
+
+    return head;
+};
+
 

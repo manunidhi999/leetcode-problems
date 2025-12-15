@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Group Hover Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+    <!-- Parent -->
+    <div class="group bg-white p-6 rounded-lg shadow-md hover:bg-blue-500 transition duration-300">
+
+        <!-- Child -->
+        <h2 class="text-xl text-gray-800 group-hover:text-white">
+            Hover on this card
+        </h2>
+
+        <p class="text-gray-600 mt-2 group-hover:text-blue-100">
+            Text changes when parent is hovered
+        </p>
+
+    </div>
+
+</body>
+
+</html>
