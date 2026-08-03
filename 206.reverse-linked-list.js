@@ -25,7 +25,7 @@ var reverseList = function(head) {
         return head;
     }
 
-    let newHead = reverseList(head.next);
+    let newHead = reverseList(head.next); 
 
     head.next.next = head;
     head.next = null;
