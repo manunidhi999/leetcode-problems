@@ -1,0 +1,36 @@
+/*
+ * @lc app=leetcode id=303 lang=javascript
+ *
+ * [303] Range Sum Query - Immutable
+ */
+
+// @lc code=start
+/**
+ * @param {number[]} nums
+ * 
+ */
+ar NumArray = function(nums) {
+    this.prefix = [0];
+
+    for (let i = 0; i < nums.length; i++) {
+        this.prefix.push(this.prefix[i] + nums[i]);
+    }
+};
+
+
+/** 
+ * @param {number} left 
+ * @param {number} right
+ * @return {number}
+ */
+NumArray.prototype.sumRange = function(left, right) {
+    return this.prefix[right + 1] - this.prefix[left];
+};
+
+/** 
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = new NumArray(nums)
+ * var param_1 = obj.sumRange(left,right)
+ */
+// @lc code=end
+
